@@ -145,6 +145,8 @@ width: 100%;
      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
      overflow: hidden;
      padding:10px;
+     display: flex;
+     flex-direction: column;
 
  }
  .card img {
@@ -158,6 +160,12 @@ width: 100%;
 }
 .card-content {
     padding:10px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.card-content .btn {
+    margin-top: auto;
 }
 /* PRICES */
 .price {
@@ -190,3 +198,20 @@ width: 100%;
     border:1px solid #fff;
 
 }
+/* PRODUCTS GRID */
+.products-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+@media (min-width:576px){
+.products-grid{
+    grid-template-columns: 1fr 1fr 1fr;
+}
+}
+@media (min-width:992px){
+    .products-grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    }
