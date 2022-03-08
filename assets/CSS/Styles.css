@@ -127,7 +127,7 @@ width: 100%;
     
 
  }
- h2 {
+ h2, .h2{
     font-family: 'Bevan';
     font-weight: normal;
     font-size: 24px;
@@ -215,3 +215,47 @@ width: 100%;
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
     }
+    /* CART SIDEBAR */
+.cart-sidebar{
+    position: fixed;
+    background-color: #fff;
+    top:0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    padding: 15px;
+    }
+.cart-sidebar-open {
+    display: flex;
+    }
+#btn-close-cart {
+    font-size: 30px;
+    color:#7C5E47;
+    background: transparent;
+    align-self: flex-end;
+
+
+    }
+#empty-cart {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    }
+#empty-cart .fa-bag-shopping {
+    color:#7C5E47;
+    font-size: 154px;
+    opacity: 0.2;
+    margin-bottom: 25px;
+
+    }   
+@media (min-width: 768px) {
+    .cart-sidebar{
+    width: 428px;
+
+    }
+}
