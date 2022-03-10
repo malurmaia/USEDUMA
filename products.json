@@ -1,0 +1,108 @@
+{
+    "groups": [
+        {
+            "id":1,
+            "name": "Anéis",
+            "products": [
+                {
+                    "id":2,
+                    "name": "Anel lua cravejado",
+                    "image": "assets/img/Produtos/anel1mobile.png",
+                    "description":"Anel ajustável com lua e círculo cravejado em zircônia. Banho: Prata",
+                    "price": 59.90
+                },
+                {
+                    "id":2,
+                    "name": "Anel duplo com Nano Zircônias",
+                    "image": "assets/img/Produtos/anel2mobilepng.png",
+                    "description":"Anel duplo com nano zircônias e perola sintética vazado. regulavel. Banho dourado.",
+                    "price": 79.90
+                },
+                {
+                    "id":3,
+                    "name": "Anel semiaberto com zircônias",
+                    "image": "assets/img/Produtos/anel3mobile.png",
+                    "description":"Anel asemiaberto com zircônias. Banho:Dourado",
+                    "price": 49.90
+                },
+                {
+                    "id":4,
+                    "name": "Anel festa forma escultural",
+                    "image": "assets/img/Produtos/anel4mobile.png",
+                    "description":"Anel festa forma escultural cravejado em zircônia cristal. Banho dourado.",
+                    "price": 99.90
+                }
+            ]
+        },
+        {
+            "id":5,
+            "name": "Cordões",
+            "products": [
+                {
+                    "id":6,
+                    "name": "Colar bolinhas ponto luz",
+                    "image": "assets/img/Produtos/cordao1-mobile.png",
+                    "description":"Banho: Ródio Branco tamanho:40 cm + 8,0 cm extensor",
+                    "price": 89.90
+                },
+                {
+                    "id":7,
+                    "name": "Colar curto pérolas plaquinhas penduradas",
+                    "image": "assets/img/Produtos/cordao 2mobile.png",
+                    "description":"Banho: ouro 18k tamanho: 45 cm",
+                    "price": 79.90
+                },
+                {
+                    "id":8,
+                    "name": "Colar curto ponto luz",
+                    "image": "assets/img/Produtos/cordao3mobile.png",
+                    "description":"Banho: Ouro 18k | Ródio Branco. Pedras: Zircônias. Tamanho: 40 cm + 5,0 cm de extensor",
+                    "price": 109.90
+                },
+                {
+                    "id":9,
+                    "name": "Colar longo plaquinhas",
+                    "image": "assets/img/Produtos/cordao4mobile.png",
+                    "description":"Banho: Ouro 18k. Tamanho: 80 cm",
+                    "price": 89.90
+                }
+                
+            ]
+        },
+        {
+            "id":10,
+            "name": "Pulseiras",
+            "products": [
+                {
+                    "id":11,
+                    "name": "Pulseira corrente barroca",
+                    "image": "assets/img/Produtos/pulseira1mobile.png",
+                    "description":"Banho: ouro 18k. Pingente: Pérola barroca. Tamanho:21 cm",
+                    "price": 109.90
+                },
+                {
+                    "id":12,
+                    "name": "Pulseira bolinhas trabalhadas coloridas",
+                    "image": "assets/img/Produtos/pulseira2mobile.png",
+                    "description":"Banho: ouro18k Pedra: Zircônias. Tamanho: 17cm + 4,0cm",
+                    "price": 59.90
+                },
+                {
+                    "id":13,
+                    "name": "Pulseira colorida candy" ,
+                    "image": "assets/img/Produtos/pulseira3mobile.png",
+                    "description":"banho: ouro 18k. Comprimento: 16cm+ 5cm",
+                    "price": 41.93
+                },
+                {
+                    "id":14,
+                    "name": "Pulseira infatil colorida",
+                    "image": "assets/img/Produtos/pulseira4mobile.png",
+                    "description":"Banho: ouro 18k Pedra: Zircônias tamanho: 14 cm",
+                    "price": 39.90
+                }
+            ]
+        }
+         
+    ]
+}
