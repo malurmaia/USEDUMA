@@ -11,23 +11,45 @@ const btnCloseCartlEl = document.querySelector('#btn-close-cart')
 btnCloseCartlEl.addEventListener('click', closeSidebar)
 
 const fetchProducts = () => {
+    const groupsRootel = document.querySelector('#groups-root')
    fetch('http://127.0.0.1:5500/products.json')
-   .then(res => res.json()) 
-   .then (data => {
-       const groupsRootEl = document.querySelector('#groups-root')
-       console.log('acabou o JSON', data.groups)
-       for (let contador = 0;contador < data.groups.length;contador++) {
-           console.log(data.groups[contador])
-           const sectionEl = document.createElement('section')
-           const sectionTitleEl = document.createElement('h2')
-           sectionTitleEl.textContent = data.groups[contador].name
-           sectionEl.appendChild(sectionTitleEl)
-           groupsRootEl.appendChild(sectionEl)
-       }
-      
-   })
+   .then (result => result.json())
+   .then(data =>{
+       
+       data.groups.forEach((group) => {
+           const groupSectionEl = getsectionelement(group)
+           groupsRootel.appendChild(groupSectionEl)
+       })
+    })
    .catch(() => {
-       console.log('Ocorreu um erro. Tente novamente')
+       groupsRootel.innerHTML = '<p class = "error-alert">Falha ao buscar produtos. Por favor, tente novamente.</p>'
    })
 }
+const getsectionelement = (group) =>{
+    const sectionEl = document.createElement('section')
+    const sectionTitleEl = document.createElement('h2')
+    sectionTitleEl.textContent = group.name
+    sectionEl.appendChild(sectionTitleEl)
+    const productsGridEl = document.createElement('div')
+    productsGridEl.classList.add('products-grid')
+    sectionEl.appendChild(productsGridEl) 
+    group.products.forEach((product) => { 
+        console.log(product)
+        const cardWrap = document.createElement('article')
+        cardWrap.classList.add('card')
+        cardWrap.innerHTML = `
+        <img src="${product.image}" alt="${product.name}" width="316" height="193"/>
+        <div class="card-content">
+        <h3>${product.name}</h3>
+        <p class="price">R$${product.price}</p>
+        <p>${product.description}</p>
+        <button class="btn btn-main">Adicionar</button>
+        </div>
+        `
+        productsGridEl.appendChild(cardWrap)
+
+
+    })
+   return sectionEl
+ }
 fetchProducts()

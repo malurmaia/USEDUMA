@@ -260,3 +260,11 @@ width: 100%;
 
     }
 }
+.error-alert { 
+    background-color: #fff;
+    border:1px solid #bd5656;
+    border-radius: 4px;
+    padding: 10px 15px;
+    color: #8c0606;
+
+}
