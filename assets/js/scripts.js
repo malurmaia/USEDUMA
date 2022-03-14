@@ -15,7 +15,7 @@ const fetchProducts = () => {
    fetch('http://127.0.0.1:5500/products.json')
    .then (result => result.json())
    .then(data =>{
-       
+       groupsRootel.innerHTML =''
        data.groups.forEach((group) => {
            const groupSectionEl = getsectionelement(group)
            groupsRootel.appendChild(groupSectionEl)
@@ -43,13 +43,31 @@ const getsectionelement = (group) =>{
         <h3>${product.name}</h3>
         <p class="price">R$${product.price}</p>
         <p>${product.description}</p>
-        <button class="btn btn-main">Adicionar</button>
+        <button class="btn btn-main btn-adicionar">Adicionar</button>
         </div>
         `
+        const btnAddCartEl = cardWrap.querySelector('button')
+        btnAddCartEl.addEventListener('click',() =>{
+            addToCart(product)
+        })
         productsGridEl.appendChild(cardWrap)
-
-
     })
    return sectionEl
  }
 fetchProducts()
+
+const productsCart = []
+const addToCart = (newproduct) =>{
+    const productIndex = productsCart.findIndex(
+        item => item.id === newproduct.id
+        )
+    if(productIndex === -1){
+        productsCart.push({
+            ...newproduct,
+            qty:1
+        })
+    } else {
+        productsCart[productIndex].qty++
+    }
+    
+}

@@ -268,3 +268,19 @@ width: 100%;
     color: #8c0606;
 
 }
+.products-loading {
+    text-align: center;
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: #666;
+    animation: loading 2s infinite linear;
+}
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
