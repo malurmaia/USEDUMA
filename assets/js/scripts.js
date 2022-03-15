@@ -12,7 +12,7 @@ btnCloseCartlEl.addEventListener('click', closeSidebar)
 
 const fetchProducts = () => {
     const groupsRootel = document.querySelector('#groups-root')
-   fetch('http://127.0.0.1:5500/products.json')
+   fetch('/products.json')
    .then (result => result.json())
    .then(data =>{
        groupsRootel.innerHTML =''
@@ -69,5 +69,17 @@ const addToCart = (newproduct) =>{
     } else {
         productsCart[productIndex].qty++
     }
-    
+    handleCartUpdate()
+}
+const handleCartUpdate = () => {
+    if(productsCart.length > 0){
+     const CartBadge = document.querySelector('.btn-cart-badge')
+     CartBadge.classList.add('btn-cart-badge-show')
+     let total = 0 
+     productsCart.forEach (product => {
+         total = total + product.qty
+
+     })
+     CartBadge.textContent = total
+    }
 }

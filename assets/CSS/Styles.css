@@ -4,7 +4,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: #C07363 ;
+    /* background: #C07363 ; */
+    
 }
 body {
     color: #000;
@@ -45,11 +46,12 @@ width: 100%;
 #btn-cart{
     width: 60px;
     height: 60px;
-    background:#C07363 ;
+    background:#fff ;
     color:#7C5E47;
     font-size: 30px;
     position: relative;
     cursor: pointer;
+    /* background: #C07363 ; */
 
 }
 .btn-cart-badge{
@@ -65,6 +67,9 @@ width: 100%;
     justify-content: center;
     align-items: center;
 
+}
+.btn-cart-badge-show{
+    display: flex;
 }
 @media (min-width: 992px){
     .logo{
@@ -134,6 +139,13 @@ width: 100%;
     margin: 4px 0 4px ;
     color: #fff ;
  }
+ .h2-cart{
+    font-family: 'Bevan';
+    font-weight: normal;
+    font-size: 24px;
+    margin: 4px 0 4px ;
+    color: #000 ;
+ }
  h3 {
     font-family: 'benthan';
     font-size: 16px;
@@ -192,10 +204,14 @@ width: 100%;
 .btn-main:hover {
     background-color: #000;
 }
-.btn-outline {
+.btn-main-outline {
    
     background-color: #000;
-    border:1px solid #fff;
+    border:1px solid rgb(46, 39, 39);
+
+}
+.lixeira {
+    background-color: #fff;
 
 }
 /* PRODUCTS GRID */
@@ -241,7 +257,7 @@ width: 100%;
     }
 #empty-cart {
     flex-grow: 1;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -253,7 +269,21 @@ width: 100%;
     opacity: 0.2;
     margin-bottom: 25px;
 
-    }   
+    }  
+#cart-with-products ul {  
+    list-style: none;
+    display: flex;
+} 
+#cart-with-products li {
+    display: flex;
+    align-items: flex-start;
+}
+#cart-with-products li img {
+    border-radius:5px ;
+    object-fit: cover;
+    box-shadow: -3px 0px 6px;
+}
+
 @media (min-width: 768px) {
     .cart-sidebar{
     width: 428px;
@@ -283,4 +313,15 @@ width: 100%;
     100% {
         transform: rotate(360deg);
     }
+}
+/* FORMS */
+.form-input{
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    height: 38px;
+    font-family: 'Bevan';
+    padding: 9px;
+    font-size: 15px;
+    width: 68px;
+
 }

@@ -20,7 +20,7 @@
              </nav>  
              <button id="btn-cart">
                 <i class="fa-solid fa-bag-shopping"></i>
-                 <span class="btn-cart-badge">2</span>
+                 <span class="btn-cart-badge">0</span>
              </button>
         </div>  
     </header>
@@ -34,8 +34,27 @@
          <button id="btn-close-cart">
              <i class="fa-solid fa-xmark"></i>
         </button>
-        <div id="empty-cart"><i class="fa-solid fa-bag-shopping"></i>
+        <div id="empty-cart">
+            <i class="fa-solid fa-bag-shopping"></i>
             <p class="h2">Sua sacola está vazia.</p>
+        </div>
+        <div id="cart-with-products">
+            <p class="h2-cart">Resumo do pedido:</p>
+            <ul>
+                <li>
+                    <img src="assets/img/Produtos/anel3mobile.png" alt="Anel semiaberto com Zircônias" width="70" height="70"/>
+                </li>
+                <p>Anel semiaberto com zircônias</p>
+                <p class="price">R$49,90</p>
+                <input class="form-input"/>
+                <button class="lixeira"><i class="fa-solid fa-trash"></i></button>
+            </ul>
+            <div>
+                <p>Total</p>
+                <p>R$58,99</p>
+            </div>
+            <button class="btn btn-main-outline">Continuar comprando</button>
+            <button class="btn btn-main">Concluir pedido</button>
         </div>
      </aside>
      <script src="assets/js/scripts.js"></script>
