@@ -217,7 +217,7 @@ width: 100%;
 
 }
 .lixeira {
-    bbackground: #C07363;
+    background: #C07363;
 
 }
 /* PRODUCTS GRID */
@@ -263,12 +263,14 @@ width: 100%;
 
     }
 #empty-cart {
-    flex-grow: 1;
-    display: none;
+    /* flex-grow: 1; */
+    /* display: none; */
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    }
+#empty-cart.empty-cart-show{
+        display: flex;
     }
 #empty-cart .fa-bag-shopping {
     color:#7C5E47;
@@ -280,6 +282,9 @@ width: 100%;
 #cart-with-products {
     overflow: auto;
     display: none;
+}
+#cart-with-products.cart-with-products-show{
+    display: block;
 }
 #cart-with-products ul {  
     list-style: none;
