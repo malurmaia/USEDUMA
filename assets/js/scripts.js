@@ -72,26 +72,27 @@ const addToCart = (newproduct) =>{
     handleCartUpdate()
 }
 const handleCartUpdate = () => {
-    if(productsCart.length > 0){
+    const emptyCart = document.querySelector
+('#empty-cart')
+const cartWithProducts = document.querySelector
+('#cart-with-products')
+    if (productsCart.length > 0) {
         // atualizacao da badge
      const CartBadge = document.querySelector('.btn-cart-badge')
      CartBadge.classList.add('btn-cart-badge-show')
      let total = 0 
-     productsCart.forEach (product => {
+     productsCart.forEach(product => {
          total = total + product.qty
      })
      CartBadge.textContent = total
     //  exibir carrinho com produtos
-    const cartWithProducts = document.querySelector
-    ('cart-with-products')
     cartWithProducts.classList.add
     ('cart-with-products-show')
-
-    } else {
+    emptyCart.classList.remove('empty-cart-show')
+    }else{
 //  exibir carrinho vazio
-const emptyCart = document.querySelector
-('empty-cart')
 emptyCart.classList.add('empty-cart-show')
+cartWithProducts.classList.remove('cart-with-products-show')
     }
 }
 handleCartUpdate()

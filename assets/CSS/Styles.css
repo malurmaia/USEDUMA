@@ -263,8 +263,8 @@ width: 100%;
 
     }
 #empty-cart {
-    /* flex-grow: 1; */
-    /* display: none; */
+    flex-grow: 1;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
