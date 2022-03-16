@@ -76,6 +76,7 @@ const handleCartUpdate = () => {
 ('#empty-cart')
 const cartWithProducts = document.querySelector
 ('#cart-with-products')
+const cartProductsList = cartWithProducts.querySelector('ul')
     if (productsCart.length > 0) {
         // atualizacao da badge
      const CartBadge = document.querySelector('.btn-cart-badge')
@@ -89,6 +90,20 @@ const cartWithProducts = document.querySelector
     cartWithProducts.classList.add
     ('cart-with-products-show')
     emptyCart.classList.remove('empty-cart-show')
+    // Exibir produtos do carrinho
+    cartProductsList.innerHTML= ' '
+    productsCart.forEach((product)=> {
+        const listItem = document.createElement('li')
+        listItem.innerHTML = `
+         <img src="${product.image}" alt="${product.name}" width="70" height="70"/>
+        <p>${product.name}</p>
+        <p class="price">${product.price}</p>
+        <input class="form-input" type="number" value="${product.qty}"/>
+        <button class="lixeira"><i class="fa-solid fa-trash"></i></button>
+        `
+        cartProductsList.appendChild(listItem)
+
+    })
     }else{
 //  exibir carrinho vazio
 emptyCart.classList.add('empty-cart-show')
