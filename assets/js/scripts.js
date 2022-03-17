@@ -77,12 +77,17 @@ const removeofcart = id => {
         }
         return true 
     })
- handleCartUpdate
+ handleCartUpdate()
  if (productsCart.length === 0) {
      closeSidebar()
  }
 }
 const updateItemQty = (id, newqty) => {
+    const newQtynumber = parseInt(newqty)
+    if (isNaN(newQtynumber)){
+        return
+    }
+    if (newQtynumber > 0){
     const productIndex = productsCart.findIndex((product) => {
         if (product.id === id){
         return true
@@ -90,15 +95,16 @@ const updateItemQty = (id, newqty) => {
         return false
     })
     productsCart[productIndex].qty = parseInt(newqty)
-    handleCartUpdate()
+    handleCartUpdate(false)
+    }else {
+        removeofcart(id)
+    }
 }
-const handleCartUpdate = () => {
-    const emptyCart = document.querySelector
-('#empty-cart')
-const cartWithProducts = document.querySelector
-('#cart-with-products')
-const cartProductsList = cartWithProducts.querySelector('ul')
-const CartBadge = document.querySelector('.btn-cart-badge')
+const handleCartUpdate = (renderitens = true) => {
+    const emptyCart = document.querySelector('#empty-cart')
+    const cartWithProducts = document.querySelector('#cart-with-products') 
+    const cartProductsList = cartWithProducts.querySelector('ul')
+    const CartBadge = document.querySelector('.btn-cart-badge')
     if (productsCart.length > 0) {
         //  Calcula total do carrinho
         let total = 0 
@@ -118,6 +124,7 @@ const CartBadge = document.querySelector('.btn-cart-badge')
     ('cart-with-products-show')
     emptyCart.classList.remove('empty-cart-show')
     // Exibir produtos do carrinho
+    if (renderitens) {
     cartProductsList.innerHTML= ' '
     productsCart.forEach((product)=> {
         const listItem = document.createElement('li')
@@ -151,6 +158,7 @@ const CartBadge = document.querySelector('.btn-cart-badge')
         })
         cartProductsList.appendChild(listItem)
     })
+}
     }else{
         // esconder badge
         CartBadge.classList.remove('btn-cart-badge-show')
