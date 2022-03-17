@@ -82,6 +82,16 @@ const removeofcart = id => {
      closeSidebar()
  }
 }
+const updateItemQty = (id, newqty) => {
+    const productIndex = productsCart.findIndex((product) => {
+        if (product.id === id){
+        return true
+        }
+        return false
+    })
+    productsCart[productIndex].qty = parseInt(newqty)
+    handleCartUpdate()
+}
 const handleCartUpdate = () => {
     const emptyCart = document.querySelector
 ('#empty-cart')
@@ -124,8 +134,21 @@ const CartBadge = document.querySelector('.btn-cart-badge')
         `
         const btnRemoveEl = listItem.querySelector('button')
         btnRemoveEl.addEventListener('click', () => {
+          console.log('clicou em mim')
           removeofcart(product.id)
        })
+       const inputQty = listItem.querySelector('input')
+        inputQty .addEventListener('keyup', (event) => {
+          updateItemQty(product.id, event.target.value)
+        })
+        inputQty .addEventListener('keydown', (event) => {
+          if (event.key === '-' || event.key === '.' || event.key === ',') {
+            event.preventDefault()
+          }
+        })
+        inputQty.addEventListener('change', (event) => {
+          updateItemQty(product.id, event.target.value)
+        })
         cartProductsList.appendChild(listItem)
     })
     }else{
