@@ -1,5 +1,6 @@
 const cartSidebarEl = document.querySelector('.cart-sidebar')
-function openSidebar (){
+function openSidebar (event){
+    event.stopPropagation()
     cartSidebarEl.classList.add('cart-sidebar-open')    
 }
 function closeSidebar () {
@@ -9,6 +10,10 @@ const btnCartlEl = document.getElementById('btn-cart')
 btnCartlEl.addEventListener('click', openSidebar)
 const btnCloseCartlEl = document.querySelector('#btn-close-cart')
 btnCloseCartlEl.addEventListener('click', closeSidebar)
+document.addEventListener('click', closeSidebar)
+cartSidebarEl.addEventListener('click', (event) => {
+    event.stopPropagation()
+})
 const fetchProducts = () => {
     const groupsRootel = document.querySelector('#groups-root')
    fetch('/products.json')
@@ -56,6 +61,10 @@ const getsectionelement = (group) =>{
 fetchProducts()
 
 let productsCart = []
+const saveProducts = localStorage.getItem('productsCart')
+if (saveProducts) {
+productsCart = JSON.parse(saveProducts)
+}
 const addToCart = (newproduct) =>{
     const productIndex = productsCart.findIndex(
         item => item.id === newproduct.id
@@ -101,6 +110,10 @@ const updateItemQty = (id, newqty) => {
     }
 }
 const handleCartUpdate = (renderitens = true) => {
+    // LocalStorage
+    const productsCartString = JSON.stringify
+    (productsCart)
+    localStorage.setItem('productsCart', productsCartString)
     const emptyCart = document.querySelector('#empty-cart')
     const cartWithProducts = document.querySelector('#cart-with-products') 
     const cartProductsList = cartWithProducts.querySelector('ul')
@@ -168,3 +181,9 @@ cartWithProducts.classList.remove('cart-with-products-show')
     }
 }
 handleCartUpdate()
+window.addEventListener('storage', (event) => {
+    if (event.key === 'productsCart'){
+        productsCart = JSON.parse(event.newValue)
+ handleCartUpdate
+    }
+})
