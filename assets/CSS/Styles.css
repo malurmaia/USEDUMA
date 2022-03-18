@@ -198,6 +198,7 @@ width: 100%;
     color: rgb(22, 11, 11);
     cursor: pointer;
     transition: all .3s linear;
+    text-decoration: none;
 }
 .btn-main {
     background-color: #fff;

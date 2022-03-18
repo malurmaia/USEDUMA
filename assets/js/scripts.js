@@ -14,8 +14,11 @@ document.addEventListener('click', closeSidebar)
 cartSidebarEl.addEventListener('click', (event) => {
     event.stopPropagation()
 })
+const btnaddmoreitens = document.querySelector('#btn-add-more-itens')
+btnaddmoreitens?.addEventListener('click', closeSidebar)
+
+const groupsRootel = document.querySelector('#groups-root')
 const fetchProducts = () => {
-    const groupsRootel = document.querySelector('#groups-root')
    fetch('/products.json')
    .then (result => result.json())
    .then(data =>{
@@ -58,7 +61,9 @@ const getsectionelement = (group) =>{
     })
    return sectionEl
  }
+ if (groupsRootel){
 fetchProducts()
+ }
 
 let productsCart = []
 const saveProducts = localStorage.getItem('productsCart')
