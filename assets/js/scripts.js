@@ -196,6 +196,10 @@ window.addEventListener('storage', (event) => {
 const formCheckout = document.querySelector('.form-checkout')
 formCheckout?.addEventListener('submit', (event) => {
     event.preventDefault()
+    if(productsCart.length == 0){
+        alert('Nenhum produto no carrinho.')
+        return
+    }
     let text = 'Confira o pedido abaixo:\n---------------------------------------\n\n'
   let total = 0
   productsCart.forEach(product => {
