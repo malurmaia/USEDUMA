@@ -9,9 +9,9 @@ cartSidebarEl.classList.remove('cart-sidebar-open')
 const btnCartlEl = document.getElementById('btn-cart')
 btnCartlEl.addEventListener('click', openSidebar)
 const btnCloseCartlEl = document.querySelector('#btn-close-cart')
-btnCloseCartlEl.addEventListener('click', closeSidebar)
+btnCloseCartlEl?.addEventListener('click', closeSidebar)
 document.addEventListener('click', closeSidebar)
-cartSidebarEl.addEventListener('click', (event) => {
+cartSidebarEl?.addEventListener('click', (event) => {
     event.stopPropagation()
 })
 const btnaddmoreitens = document.querySelector('#btn-add-more-itens')

@@ -14,9 +14,10 @@
 <body>
     <header class="header">
         <div class="container">
-            <img src="assets/img/logo-usedumar.png" atl="logo USEDUMA" height="70" width="99" class="logo"/>
+            <img src="assets/img/Produtos/logoduma.svg" atl="logo USEDUMA" height="70" width="99" class="logo"/>
              <nav>
-                 <a href="saiba-mais.html">Saiba mais</a>
+                <a href="faleconosco">Fale Conosco</a>
+                 <a href="Saiba-mais.html">Saiba Mais</a>
              </nav>  
              <button id="btn-cart">
                 <i class="fa-solid fa-bag-shopping"></i>
@@ -24,26 +25,78 @@
              </button>
         </div>  
     </header>
-    <aside class=" cart-sidebar">
-        <button id="btn-close-cart">
-            <i class="fa-solid fa-xmark"></i>
-       </button>
-       <div id="empty-cart">
-           <i class="fa-solid fa-bag-shopping"></i>
-           <p class="h2">Sua sacola está vazia.</p>
-       </div>
-       <div id="cart-with-products">
-           <p class="h2-cart">Resumo do pedido:</p>
-           <ul>
-           </ul>
-           <div class="cart-total">
-               <p class="h3-total">Total</p>
-               <p class="h3">R$58,99</p>
-           </div>
-           <a class="btn btn-main-outline" href="index.html">Continuar comprando</a>
-           <a class="btn btn-main" href="finalizar-pedido.html">Concluir pedido</a>
-       </div>
-    </aside>
-    <script src="assets/js/scripts.js"></script>
+    <main class="container">
+      <h1>Finalizar Pedido</h1>  
+      <form class="form-checkout">
+        <div class="form-group">
+            <label for="input-name"> Nome </label> 
+            <input
+                type="text" 
+                class="form-input"
+                placeholder="Digite seu nome" 
+                id="input-name"/>
+        </div>
+        <div class="form-group">
+            <label for="input-phone"> Telefone </label> 
+            <input
+                type="text" 
+                class="form-input"
+                placeholder="(00) 00000-0000" 
+                id="input-phone"/>
+        </div>
+        <div class="form-group">
+            <label for="input-cep"> CEP </label> 
+            <input
+                type="text" 
+                class="form-input"
+                placeholder="00000-0000" 
+                id="input-cep"/>
+        </div>
+        <div class="form-group">
+            <label for="input-address"> Endereço </label> 
+            <input
+                type="text" 
+                class="form-input"
+                placeholder="Av,Rua,etc." 
+                id="input-address"/>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="input-number"> Número </label> 
+                <input
+                    type="text" 
+                    class="form-input"
+                    id="input-number"/>
+            </div>
+            <div class="form-group">
+                <label for="input-complement"> Complemento </label> 
+                <input
+                    type="text" 
+                    class="form-input"
+                    id="input-complement"/>
+            </div>
+        </div>
+        <div class="form-row">
+        <div class="form-group">
+            <label for="input-neighborhood"> Bairro</label> 
+            <input
+                type="text" 
+                class="form-input"
+                id="input-neighborhood"/>
+        </div>
+        <div class="form-group">
+            <label for="input-city"> Cidade  </label> 
+            <input
+                type="text" 
+                class="form-input"
+                id="input-city"/>
+        </div>
+        </div>
+    </form>
+    <input
+     type="submit" 
+     value="Calcular Frete" 
+     class="btn btn-main"/>
+    <script src="assets/js/scripts2.js"></script>
 </body>
 </html>

@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: #C07363 ;
+    /* background: #C07363 ; */
     
 }
 body {
@@ -25,6 +25,7 @@ padding: 10px;
 position: fixed;
 top: 0;
 width: 100%;
+background-color: #fff;
 
 }
 .header > div{
@@ -35,12 +36,14 @@ width: 100%;
 .logo{
     margin-right: auto;
     padding: 0;
+    height: 90px;
+    width: 70;
 
 
 }
 .header nav a {
     color: #7C5E47;
-    padding:12px;
+    padding:10px;
     text-decoration: none;
 }
 #btn-cart{
@@ -51,7 +54,7 @@ width: 100%;
     font-size: 30px;
     position: relative;
     cursor: pointer;
-    background: #C07363 ;
+    /* background: #C07363 ; */
 
 }
 .btn-cart-badge{
@@ -128,7 +131,8 @@ width: 100%;
      font-size: 32px;
      text-align: center;
      margin: 5px 0 5px ;
-     color: #fff ;
+     color: #bd5656;
+     padding-top: 18px;
     
 
  }
@@ -137,7 +141,7 @@ width: 100%;
     font-weight: normal;
     font-size: 24px;
     margin: 4px 0 4px ;
-    color: #fff ;
+    color: #bd5656 ;
  }
  .h2-cart{
     font-family: 'Bevan';
@@ -188,6 +192,9 @@ width: 100%;
     font-weight: 600;
 }
 /* BUTTONS */
+ button {
+     background-color: #ced4da;
+ }
 .btn{
     text-align: center;
     font-size: 16px;
@@ -218,7 +225,7 @@ width: 100%;
 
 }
 .lixeira {
-    background: #C07363;
+    background: #ced4da;
 
 }
 /* PRODUCTS GRID */
@@ -242,7 +249,7 @@ width: 100%;
     /* CART SIDEBAR */
 .cart-sidebar{
     position: fixed;
-    /* background-color: #fff; */
+    background-color: #ced4da;
     top:0;
     right: 0;
     width: 100vw;
@@ -370,11 +377,28 @@ width: 100%;
     border: 1px solid #ced4da;
     border-radius: 4px;
     height: 38px;
-    font-family: 'Bevan';
     padding: 9px;
+    font-family: inherit;
     font-size: 15px;
-    width: 68px;
-    align-self: center;
-    gap: 12px;
-
+}
+.form-input ::placeholder,
+.form-input:-ms-input-placeholder,
+.form-input::-ms-input-placeholder{
+    color: #000;
+    opacity: 1;
+}
+.form-group {
+    margin-bottom: 12px;
+}
+.form-group label{
+    color: #000;
+    display: block;
+}
+.form-group .form-input {
+    width: 100%;
+}
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
 }
