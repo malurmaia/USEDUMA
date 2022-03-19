@@ -16,8 +16,7 @@
         <div class="container">
             <img src="assets/img/Produtos/logoduma.svg" atl="logo USEDUMA" height="70" width="99" class="logo"/>
              <nav>
-                <a href="faleconosco">Fale Conosco</a>
-                 <a href="Saiba-mais.html">Saiba Mais</a>
+                <a href="https://api.whatsapp.com/send?phone=5521996585647">Fale Conosco</a>
              </nav>  
              <button id="btn-cart">
                 <i class="fa-solid fa-bag-shopping"></i>
@@ -92,11 +91,32 @@
                 id="input-city"/>
         </div>
         </div>
-    </form>
     <input
      type="submit" 
      value="Calcular Frete" 
      class="btn btn-main"/>
-    <script src="assets/js/scripts2.js"></script>
+    </form>
+    </main>
+    <aside class="cart-sidebar">
+        <button id="btn-close-cart">
+            <i class="fa-solid fa-xmark"></i>
+       </button>
+       <div id="empty-cart">
+           <i class="fa-solid fa-bag-shopping"></i>
+           <p class="h2">Sua sacola está vazia.</p>
+       </div>
+       <div id="cart-with-products">
+           <p class="h2-cart">Resumo do pedido:</p>
+           <ul>
+           </ul>
+           <div class="cart-total">
+               <p class="h3-total">Total</p>
+               <p class="h3">R$58,99</p>
+           </div>
+           <button class="btn btn-main-outline" id="btn-add-more-itens">Continuar comprando</button>
+           <a class="btn btn-main" href="finalizar-pedido.html">Concluir pedido</a>
+       </div>
+    </aside>
+    <script src="assets/js/scripts.js"></script>
 </body>
 </html>

@@ -192,3 +192,28 @@ window.addEventListener('storage', (event) => {
  handleCartUpdate
     }
 })
+
+const formCheckout = document.querySelector('.form-checkout')
+formCheckout?.addEventListener('submit', (event) => {
+    event.preventDefault()
+    let text = 'Confira o pedido abaixo:\n---------------------------------------\n\n'
+  let total = 0
+  productsCart.forEach(product => {
+    text += `*${product.qty}x ${product.name}* - ${product.price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}\n`
+    total += product.price * product.qty
+  })
+  text += '\n*Taxa de entrega:* A combinar\n'
+  text += `*Total: ${total.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}*`
+  text += '\n---------------------------------------\n\n'
+  text += `*${formCheckout.elements['input-name'].value}*\n`
+  text += `${formCheckout.elements['input-phone'].value}\n\n`
+  text += `${formCheckout.elements['input-address'].value}, ${formCheckout.elements['input-number'].value}`
+  const complement = formCheckout.elements['input-complement'].value
+  if (complement) {
+    text+= ` - ${complement}`
+  }
+    text += `\n${formCheckout.elements['input-neighborhood'].value}, ${formCheckout.elements['input-city'].value}\n`
+    text += formCheckout.elements['input-cep'].value
+    const subdomain = window.innerWidth > 768 ? 'web' : 'api'
+    window.open(`https://${subdomain}.whatsapp.com/send?phone=5521996585647&text=${encodeURI(text)}`,'blank')
+})

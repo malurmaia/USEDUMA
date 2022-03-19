@@ -66,7 +66,7 @@ background-color: #fff;
     width: 20px;
     height: 20px;
     font-size: 12px;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 
@@ -188,7 +188,7 @@ background-color: #fff;
 }
 /* PRICES */
 .price {
-    color:#fff;
+    color:#666;
     font-weight: 600;
 }
 /* BUTTONS */
@@ -401,4 +401,9 @@ background-color: #fff;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
+}
+/* FORM CHECKOUT */
+.form.checkout{
+    max-width: 424px;
+    margin: 0 auto;
 }
