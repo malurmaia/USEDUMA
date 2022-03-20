@@ -33,11 +33,9 @@ background-color: #fff;
     align-items: center;
     padding:10px 0;
 }
-.logo{
+.logolink{
     margin-right: auto;
-    padding: 0;
-    height: 90px;
-    width: 70;
+   
 
 
 }

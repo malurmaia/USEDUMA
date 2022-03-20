@@ -221,3 +221,14 @@ formCheckout?.addEventListener('submit', (event) => {
     const subdomain = window.innerWidth > 768 ? 'web' : 'api'
     window.open(`https://${subdomain}.whatsapp.com/send?phone=5521996585647&text=${encodeURI(text)}`,'blank')
 })
+
+if (typeof IMask !== 'undefined') {
+    const inputPhoneEl = document.querySelector('#input-phone')
+    IMask(inputPhoneEl, {
+      mask: '(00) 00000-0000'
+    })
+    const inputCepEl = document.querySelector('#input-cep')
+    IMask(inputCepEl, {
+      mask: '00000-000'
+    })
+  }

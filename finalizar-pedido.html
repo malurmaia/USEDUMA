@@ -14,7 +14,9 @@
 <body>
     <header class="header">
         <div class="container">
-            <img src="assets/img/Produtos/logoduma.svg" atl="logo USEDUMA" height="70" width="99" class="logo"/>
+            <a class="logolink" href="/">
+            <img src="assets/img/Produtos/logoduma.svg" atl="logo USEDUMA" width="120" height="90" class="logo"/>
+            </a>
              <nav>
                 <a href="https://api.whatsapp.com/send?phone=5521996585647">Fale Conosco</a>
              </nav>  
@@ -40,7 +42,7 @@
         <div class="form-group">
             <label for="input-phone"> Telefone </label> 
             <input
-                type="text" 
+                type="number" 
                 class="form-input"
                 placeholder="(00) 00000-0000" 
                 id="input-phone"
@@ -49,7 +51,7 @@
         <div class="form-group">
             <label for="input-cep"> CEP </label> 
             <input
-                type="text" 
+                type="number" 
                 class="form-input"
                 placeholder="00000-0000" 
                 id="input-cep"
@@ -125,6 +127,7 @@
            <a class="btn btn-main" href="finalizar-pedido.html">Concluir pedido</a>
        </div>
     </aside>
+    <script src="https://unpkg.com/imask"></script>
     <script src="assets/js/scripts.js"></script>
 </body>
 </html>
