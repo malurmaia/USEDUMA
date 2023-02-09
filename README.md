@@ -1,5 +1,4 @@
 <h1 align="center">
-<img src="./assets/img/produtos/logoduma.svg"/>
 <p>UseDuma</p>
 </h1>
 
@@ -45,6 +44,7 @@ https://epic-swanson-446d68.netlify.app
 
 Faça o download do código fonte no computador:
 git clone https://github.com/malurmaia/USEDUMA
+
 Abra o projeto no VS Code e execute a extensão Live Server ou coloque os arquivos no servidor HTTP desejado.
 
 **<h3>Tecnologias utilizadas</h3>**
