@@ -6,6 +6,8 @@
 
 **Catálogo virtual de produtos para empresas que trabalham com delivery ou entrega por correios.**
 
+*Projeto desenvolvido academicamente durante o Bootcamp Fullstack do **Instituto Infnet***
+
 <h3 align="Center"> Sobre o projeto</h3>
 
 <p>Empresas gastam energia e recursos respondendo um cliente por vez através de WhatsApp e, por outro lado, clientes ficam aguardando para ver os produtos e finalizar o pedido.</p>
